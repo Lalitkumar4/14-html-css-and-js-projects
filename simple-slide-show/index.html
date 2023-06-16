@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SimpleSlideShow</title>
+  </head>
+  <body>
+    <div style="text-align: center; margin-top: 5rem">
+      <img name="slide" width="400" height="200" />
+    </div>
+
+    <script>
+      let i = 0; //Start Point
+      let images = []; //Images Array
+      let time = 3000; //Time Between Switch
+
+      // Image List
+      images[0] = "img/img1.png";
+      images[1] = "img/img2.png";
+      images[2] = "img/img3.jpg";
+      images[3] = "img/img4.png";
+
+      //Change Image
+      function changeImg() {
+        document.slide.src = images[i];
+
+        // Check If Index Is Under Max
+        if (i < images.length - 1) {
+          // Add 1 to Index
+          i++;
+        } else {
+          // Reset Back To 0
+          i = 0;
+        }
+
+        // Run function every x seconds
+        setTimeout("changeImg()", time);
+      }
+
+      // Run function when page Load
+      window.addEventListener("load", changeImg);
+    </script>
+  </body>
+</html>

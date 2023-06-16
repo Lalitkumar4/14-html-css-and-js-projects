@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #040404;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Open Sans", sans-serif;
+}
+
+.field {
+  position: relative;
+  overflow: hidden;
+}
+
+.field__counter {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 1.6rem;
+  height: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 0.8rem;
+  color: #f5f8ff;
+  background: rgba(245, 248, 255, 0.2);
+  border-radius: 0.2rem;
+}
+
+.field__input {
+  border: none;
+  outline: none;
+
+  font-family: inherit;
+  font-size: 1.4rem;
+
+  padding: 0.8rem 2rem 0.8rem 0;
+  min-width: 16rem;
+
+  background: none;
+  color: #f5f8ff;
+  border-bottom: 0.15rem solid rgba(245, 248, 255, 0.4);
+}
+
+.field__input::placeholder {
+  color: rgba(245, 248, 255, 0.4);
+}
+
+.field::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0.15rem;
+
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-out;
+
+  background: #ff652f;
+}
+
+.field:hover::after,
+.field:focus::after,
+.field:focus-within::after {
+  transform: translateX(0);
+}

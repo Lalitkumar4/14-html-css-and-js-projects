@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Muli", sans-serif;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.background {
+  background-image: url("https://images.unsplash.com/photo-1556745757-8d76bdb6984b");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  filter: blur(20px);
+  z-index: -1;
+}
+
+.form {
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.3);
+}
+
+.form p {
+  color: gray;
+  font-size: 1rem;
+  padding: 0.2rem 0rem 1.5rem 0rem;
+}
+
+.email,
+.password {
+  position: relative;
+}
+
+.email label,
+.password label {
+  display: inline-block;
+  position: absolute;
+  top: -15px;
+  left: 0;
+  color: rgb(66, 65, 65);
+}
+
+.email input,
+.password input {
+  width: 100%;
+  padding: 0.5rem 0.6rem;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  font-size: 15px;
+  margin: 1rem 0;
+}
+
+.password label {
+  top: -5px;
+}
+
+.password input {
+  margin: 1.5rem 0;
+}
+
+::placeholder {
+  color: rgb(180, 176, 176);
+  font-weight: bold;
+}
+
+.submit input {
+  width: 100%;
+  padding: 0.6rem 0;
+  background-color: #111;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
